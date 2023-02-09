@@ -1,0 +1,34 @@
+Occasionally, some applications and games (eg. some from the Humble Indie Bundle) have .run installers. Before installing using these, check to see if:
+
+it is available from the Software Centre
+it is available as a .deb file, which will open in the Software Center
+You can install .run files from the graphical interface, but using a terminal is more likely to give you useful feedback. To install a .run file you need to:
+
+make it executable.
+execute it
+This is because .run files are just executable programs that do some unknown magic to install the program. This is similar to what .exe installers do on Windows and is different to the normal methods (at best, using the Software Centre, at worst using .deb files) in which applications are installed in a standard way and can be easily removed.
+
+Graphical Method
+
+Right click on the file in the file manager and click 'Properties'. Click the 'Permissions' tab and tick the box that says 'Allow executing file as program'.
+Double click the file to execute it.
+If this method doesn't work, try using the terminal method.
+
+Terminal Method
+
+Assume the file is called some-app.run and is in the folder /home/user/Downloads. You will need to modify these instructions to fit your situation.
+
+Open a terminal (Applications->Accessories->Terminal).
+
+enter cd /home/user/Downloads
+
+enter chmod +x some-app.run
+
+enter ./some-app.run
+
+if step 4 fails with a message including 'permission denied', try entering sudo ./some-app.run (you will need to enter your password for this).
+
+Notes
+Sometimes you will come across .bin files. These are similar to .run files from the user's point of view.
+The method to install .run files can be used to execute any file (as long as it has some sort of executable code in it.
+Be careful using sudo and only use it when absolutely required. Translated into English, it means 'Run this command but allow it to do anything it wants to my computer'. This is why you are prompted for your password.

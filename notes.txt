@@ -1,0 +1,21 @@
+
+
+
+
+
+
+To permanently remove a directory in Linux, use either rmdir or rm command:
+
+For empty directories, use rmdir [dirname] or rm -d [dirname]
+
+For non-empty directories, use rm -r [dirname]
+
+sudo chmod -R 777 /opt/lampp/htdocs/pollution_alerts
+
+sudo rm -rf <directory>
+#If error caused during deleting root files
+
+
+9762854694
+
+

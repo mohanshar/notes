@@ -1,0 +1,9 @@
+sudo /opt/lampp/xampp start.
+sudo /opt/lampp/xampp stop.
+
+Open your terminal and run below commands and check it’s working in my ubuntu server
+
+sudo /etc/init.d/apache2 stop   
+sudo /opt/lampp/lampp start
+
+Now you can run above command for running Xampp server .

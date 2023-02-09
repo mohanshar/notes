@@ -1,0 +1,22 @@
+https://www.debugpoint.com/2-ways-fix-laptop-brightness-problem-ubuntu-linux/#:~:text=Method%201%3A%20Fix%20Brightness%20Enabling%20Laptop%20Specific%20Drivers&text=This%20would%20ensure%20to%20load,and%20run%20the%20below%20command.
+
+
+Open the file /etc/default/grub using gedit or any other text editor.
+
+Find the below line.
+
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
+Change the above line to:
+
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash acpi_backlight=vendor"
+
+This would ensure to load of device-specific drivers before default drivers in Linux.
+
+Save the file and close the text editor.
+Open the terminal and run the below command.
+
+update-grub
+
+reboot
+
+After rebooting, try adjusting the brightness using laptop’s dedicated control keys.

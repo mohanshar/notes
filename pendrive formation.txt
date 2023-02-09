@@ -1,0 +1,28 @@
+Use the command line to format the usb pendrive
+
+To show the USB drive among all storage partitions and volumes on your computer use:
+
+lsblk
+You can also use:
+
+df
+
+Suppose it may be /dev/sdy1. Unmount it with:
+
+sudo umount /dev/sdy1
+
+To format drive with the FAT32 file system format:
+
+sudo mkfs.vfat -F 32 /dev/sdy1
+
+To set a file system label for your pen drive in the process:
+
+sudo mkfs.vfat -F 32 -n 'name_for_your_pendrive' /dev/sdy1
+
+You must include the -F 32 part to specify the FAT size, it is not 32 by default in ubuntu 19.10. For more info see man mkfs.fat.
+
+It will work even if the usb is write protected.
+
+For pen-drive, you don't need the -I option, and might prefer to use: mkfs.fat -v -F 32 -n "MyUsbStick" /dev/sda
+
+To rename a FAT16 or 32 filesystem I am more used to: sudo mlabel -i /dev/sdy1 ::name_for_your_pendrive 
